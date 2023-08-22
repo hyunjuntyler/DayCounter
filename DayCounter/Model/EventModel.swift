@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Event: Identifiable, Encodable, Decodable {
     var id = UUID()
@@ -23,8 +24,12 @@ struct Event: Identifiable, Encodable, Decodable {
 
 
 class EventModel: ObservableObject {
+    
     @Published var events: [Event] = []
     
+    init() {
+        loadItems()
+    }
     
     // MARK: Basic Functions
     
@@ -51,13 +56,17 @@ class EventModel: ObservableObject {
     // MARK: List onDelete, onMove 의 perform: 뒤에 들어가는 함수
     
     func delete(at: IndexSet) {
-        events.remove(atOffsets: at)
-        saveItems()
+        withAnimation() {
+            events.remove(atOffsets: at)
+            saveItems()
+        }
     }
     
     func move(from: IndexSet, to: Int) {
-        events.move(fromOffsets: from, toOffset: to)
-        saveItems()
+        withAnimation() {
+            events.move(fromOffsets: from, toOffset: to)
+            saveItems()
+        }
     }
     
     // MARK: Save, Load items in User Defaults
@@ -76,9 +85,5 @@ class EventModel: ObservableObject {
                 events = decodedData
             }
         }
-    }
-    
-    init() {
-        loadItems()
     }
 }

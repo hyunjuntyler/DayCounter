@@ -13,6 +13,15 @@
 		293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B182A95128600A63324 /* Preview Assets.xcassets */; };
 		293C6B202A9512D700A63324 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B1F2A9512D700A63324 /* README.md */; };
 		293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* HapticFeedback.swift */; };
+		293C6B262A9516D200A63324 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B252A9516D200A63324 /* EventModel.swift */; };
+		293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B282A9517B200A63324 /* OnboardingView.swift */; };
+		293C6B2C2A9517E900A63324 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2B2A9517E900A63324 /* CustomButton.swift */; };
+		293C6B2F2A95184000A63324 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */; };
+		293C6B322A951B9600A63324 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B312A951B9600A63324 /* MainView.swift */; };
+		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
+		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
+		293C6B382A951C9800A63324 /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B372A951C9800A63324 /* MainCardView.swift */; };
+		293C6B3A2A951CED00A63324 /* CalculateDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B392A951CED00A63324 /* CalculateDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +32,16 @@
 		293C6B182A95128600A63324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		293C6B1F2A9512D700A63324 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		293C6B222A9515DB00A63324 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		293C6B252A9516D200A63324 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		293C6B282A9517B200A63324 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		293C6B2B2A9517E900A63324 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		293C6B312A951B9600A63324 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		293C6B332A951BEF00A63324 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		293C6B372A951C9800A63324 /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
+		293C6B392A951CED00A63324 /* CalculateDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateDay.swift; sourceTree = "<group>"; };
+		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +75,12 @@
 		293C6B102A95128500A63324 /* DayCounter */ = {
 			isa = PBXGroup;
 			children = (
+				293C6B3B2A952B7600A63324 /* Info.plist */,
 				293C6B112A95128500A63324 /* DayCounterApp.swift */,
 				293C6B132A95128500A63324 /* ContentView.swift */,
-				293C6B212A9514E200A63324 /* Utilities */,
+				293C6B272A9517A000A63324 /* View */,
+				293C6B242A9516AC00A63324 /* Model */,
+				293C6B212A9514E200A63324 /* Utility */,
 				293C6B152A95128600A63324 /* Assets.xcassets */,
 				293C6B172A95128600A63324 /* Preview Content */,
 			);
@@ -73,12 +95,51 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		293C6B212A9514E200A63324 /* Utilities */ = {
+		293C6B212A9514E200A63324 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				293C6B222A9515DB00A63324 /* HapticFeedback.swift */,
+				293C6B392A951CED00A63324 /* CalculateDay.swift */,
 			);
-			path = Utilities;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		293C6B242A9516AC00A63324 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B252A9516D200A63324 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		293C6B272A9517A000A63324 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B282A9517B200A63324 /* OnboardingView.swift */,
+				293C6B312A951B9600A63324 /* MainView.swift */,
+				293C6B372A951C9800A63324 /* MainCardView.swift */,
+				293C6B332A951BEF00A63324 /* AddEventView.swift */,
+				293C6B352A951C4B00A63324 /* EditEventView.swift */,
+				293C6B2A2A9517D700A63324 /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		293C6B2A2A9517D700A63324 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B302A951B2100A63324 /* CustomButton */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		293C6B302A951B2100A63324 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B2B2A9517E900A63324 /* CustomButton.swift */,
+				293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */,
+			);
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +215,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				293C6B142A95128500A63324 /* ContentView.swift in Sources */,
+				293C6B322A951B9600A63324 /* MainView.swift in Sources */,
+				293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
+				293C6B2F2A95184000A63324 /* CustomButtonStyle.swift in Sources */,
+				293C6B2C2A9517E900A63324 /* CustomButton.swift in Sources */,
+				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
+				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
+				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
+				293C6B3A2A951CED00A63324 /* CalculateDay.swift in Sources */,
 				293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */,
+				293C6B382A951C9800A63324 /* MainCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +357,11 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "디데이카운터";
+				INFOPLIST_FILE = DayCounter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "디데이";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,11 +388,11 @@
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "디데이카운터";
+				INFOPLIST_FILE = DayCounter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "디데이";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
