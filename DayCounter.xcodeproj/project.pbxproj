@@ -12,6 +12,7 @@
 		293C6B162A95128600A63324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B152A95128600A63324 /* Assets.xcassets */; };
 		293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B182A95128600A63324 /* Preview Assets.xcassets */; };
 		293C6B202A9512D700A63324 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B1F2A9512D700A63324 /* README.md */; };
+		293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		293C6B152A95128600A63324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293C6B182A95128600A63324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		293C6B1F2A9512D700A63324 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		293C6B222A9515DB00A63324 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				293C6B112A95128500A63324 /* DayCounterApp.swift */,
 				293C6B132A95128500A63324 /* ContentView.swift */,
+				293C6B212A9514E200A63324 /* Utilities */,
 				293C6B152A95128600A63324 /* Assets.xcassets */,
 				293C6B172A95128600A63324 /* Preview Content */,
 			);
@@ -68,6 +71,14 @@
 				293C6B182A95128600A63324 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		293C6B212A9514E200A63324 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B222A9515DB00A63324 /* HapticFeedback.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +155,7 @@
 			files = (
 				293C6B142A95128500A63324 /* ContentView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
+				293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
