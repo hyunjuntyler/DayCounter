@@ -16,7 +16,7 @@ struct AddEventView: View {
     @State var title = ""
     @State var note = ""
     
-    @State var openDatePicker = false
+    @State private var openDatePicker = false
     
     var body: some View {
         NavigationStack {
@@ -28,6 +28,7 @@ struct AddEventView: View {
                             withAnimation(.spring()) {
                                 openDatePicker.toggle()
                             }
+                            HapticFeedback.shared.impact(style: .soft)
                         } label: {
                             Text("\(date.formatted(date: .abbreviated, time: .omitted))")
                                 .foregroundStyle(openDatePicker ? .mint : .primary)
@@ -49,11 +50,6 @@ struct AddEventView: View {
                 Section {
                     HStack {
                         TextField("제목", text: $title)
-                            .onTapGesture {
-                                withAnimation(.spring()) {
-                                    openDatePicker = false
-                                }
-                            }
                         if !title.isEmpty {
                             Image(systemName: "multiply.circle.fill")
                                 .font(.callout)
@@ -65,11 +61,6 @@ struct AddEventView: View {
                     }
                     HStack(alignment: .top) {
                         TextField("노트", text: $note, axis: .vertical)
-                            .onTapGesture {
-                                withAnimation() {
-                                    openDatePicker = false
-                                }
-                            }
                         if !note.isEmpty {
                             Image(systemName: "multiply.circle.fill")
                                 .font(.callout)
@@ -78,6 +69,11 @@ struct AddEventView: View {
                                     note = ""
                                 }
                         }
+                    }
+                }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        openDatePicker = false
                     }
                 }
             }
