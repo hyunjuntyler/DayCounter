@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainCardView: View {
+struct EventCard: View {
     
     @State private var editEventView = false
     var event: Event
@@ -31,7 +31,7 @@ struct MainCardView: View {
                     .padding(20)
                     .background(
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .fill(.ultraThinMaterial)
+                            .foregroundColor(Color(.systemGray6))
                     )
                 Spacer()
                 VStack(alignment: .trailing) {
@@ -48,41 +48,41 @@ struct MainCardView: View {
             }
         }
         .buttonStyle(CustomButtonStyle())
-//        HStack {
-//            Text("\(dayCountString)")
-//                .font(.title)
-//                .bold()
-//                .fontDesign(.rounded)
-//                .foregroundStyle(.mint)
-//                .padding(20)
-//                .background(
-//                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-//                        .fill(.ultraThinMaterial)
-//                )
-//            Spacer()
-//            VStack(alignment: .trailing) {
-//                Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
-//                    .font(.caption)
-//                    .foregroundStyle(Color(.systemGray2))
-//                Spacer()
-//                Text("\(event.title)")
-//                    .font(.title3)
-//            }
-//            .padding(.vertical, 20)
-//        }
-//        .onTapGesture {
-//            editEventView = true
-//        }
         .sheet(isPresented: $editEventView) {
             EditEventView(eventModel: eventModel, date: event.date, title: event.title, note: event.note, id: event.id)
         }
     }
+    
+    /// 디데이 계산 함수
+
+    func calculateDays(to dateCount: Date) -> Int {
+        let calendar = Calendar.current
+
+        let start = calendar.startOfDay(for: Date())
+        let end = calendar.startOfDay(for: dateCount)
+
+        let components = calendar.dateComponents([.day], from: start, to: end)
+
+        return components.day ?? 0
+    }
+
+    /// 디데이에 따른 표시 설정
+
+    func formatDayCount(_ days: Int) -> String {
+        if days == 0 {
+            return "D-Day"
+        } else if days > 0 {
+            return "D-\(days)"
+        } else {
+            return "D+\(-days + 1)"
+        }
+    }
 }
 
-struct MainCardView_Previews: PreviewProvider {
+struct EventCard_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            MainCardView(event: Event(date: Date(), title: "테스트", note: "테스트입니다"), eventModel: EventModel())
+            EventCard(event: Event(date: Date(), title: "테스트", note: "테스트입니다"), eventModel: EventModel())
         }
     }
 }

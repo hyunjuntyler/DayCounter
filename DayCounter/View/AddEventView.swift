@@ -43,8 +43,7 @@ struct AddEventView: View {
                     }
                     if openDatePicker {
                         DatePicker("", selection: $date, displayedComponents: .date)
-                            .datePickerStyle(.graphical)
-                            .padding(-8)
+                            .datePickerStyle(.wheel)
                     }
                 }
                 Section {

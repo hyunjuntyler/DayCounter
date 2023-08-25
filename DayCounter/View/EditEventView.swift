@@ -44,7 +44,7 @@ struct EditEventView: View {
                     }
                     if openDatePicker {
                         DatePicker("Date", selection: $date, displayedComponents: .date)
-                            .datePickerStyle(.graphical)
+                            .datePickerStyle(.wheel)
                     }
                 }
                 Section {

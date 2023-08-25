@@ -41,7 +41,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        MainView()
+        EventListView()
             .sheet(isPresented: $onboarding) {
                 OnboardingView()
                     .interactiveDismissDisabled()

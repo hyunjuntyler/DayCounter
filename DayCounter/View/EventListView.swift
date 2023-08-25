@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct EventListView: View {
     
     @ObservedObject var eventModel = EventModel()
     @State private var addEventView = false
@@ -19,6 +19,7 @@ struct MainView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         EditButton()
+                            .disabled(eventModel.events.isEmpty)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -26,7 +27,7 @@ struct MainView: View {
                             HapticFeedback.shared.impact(style: .soft)
                         } label: {
                             Image(systemName: "plus")
-                                .fontWeight(.semibold)
+                                .fontWeight(.medium)
                         }
                     }
                 }
@@ -41,7 +42,7 @@ struct MainView: View {
         List {
             Section {
                 ForEach(eventModel.events) { item in
-                    MainCardView(event: item, eventModel: eventModel)
+                    EventCard(event: item, eventModel: eventModel)
                 }
                 .onDelete(perform: eventModel.delete)
                 .onMove(perform: eventModel.move)
@@ -68,8 +69,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        EventListView()
     }
 }
