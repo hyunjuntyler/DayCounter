@@ -21,6 +21,8 @@
 		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
 		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
 		293C6B382A951C9800A63324 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B372A951C9800A63324 /* EventCard.swift */; };
+		2972ADB22AACC09F004F2F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2972ADB42AACC09F004F2F7B /* InfoPlist.strings */; };
+		2972ADB82AACC216004F2F7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2972ADBA2AACC216004F2F7B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		293C6B372A951C9800A63324 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2972ADB32AACC09F004F2F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2972ADB52AACC0C2004F2F7B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2972ADB92AACC216004F2F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2972ADBB2AACC2A9004F2F7B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		293C6B052A95128500A63324 = {
 			isa = PBXGroup;
 			children = (
+				2972ADBA2AACC216004F2F7B /* Localizable.strings */,
+				2972ADB42AACC09F004F2F7B /* InfoPlist.strings */,
 				293C6B1F2A9512D700A63324 /* README.md */,
 				293C6B102A95128500A63324 /* DayCounter */,
 				293C6B0F2A95128500A63324 /* Products */,
@@ -180,6 +188,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 				ko,
 			);
 			mainGroup = 293C6B052A95128500A63324;
@@ -197,9 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2972ADB82AACC216004F2F7B /* Localizable.strings in Resources */,
 				293C6B202A9512D700A63324 /* README.md in Resources */,
 				293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */,
 				293C6B162A95128600A63324 /* Assets.xcassets in Resources */,
+				2972ADB22AACC09F004F2F7B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,11 +237,33 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2972ADB42AACC09F004F2F7B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2972ADB32AACC09F004F2F7B /* en */,
+				2972ADB52AACC0C2004F2F7B /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2972ADBA2AACC216004F2F7B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2972ADB92AACC216004F2F7B /* en */,
+				2972ADBB2AACC2A9004F2F7B /* ko */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		293C6B1A2A95128600A63324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -283,6 +316,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -291,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -336,6 +371,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -45,6 +45,7 @@ struct AddEventView: View {
                     if openDatePicker {
                         DatePicker("", selection: $date, displayedComponents: .date)
                             .datePickerStyle(.wheel)
+                            .padding(.leading, -10)
                     }
                 }
                 Section {
@@ -103,5 +104,8 @@ struct AddEventView: View {
 struct AddEventView_Previews: PreviewProvider {
     static var previews: some View {
         AddEventView(eventModel: EventModel())
+            .environment(\.locale, .init(identifier: "ko"))
+        AddEventView(eventModel: EventModel())
+            .environment(\.locale, .init(identifier: "en"))
     }
 }

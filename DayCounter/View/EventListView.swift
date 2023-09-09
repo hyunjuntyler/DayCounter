@@ -53,7 +53,7 @@ struct EventListView: View {
                         Image(systemName: "calendar.badge.plus")
                             .font(.title2)
                             .foregroundStyle(.mint, .gray)
-                        Text("특별한 날을 추가해주세요")
+                        Text("특별한 날을 추가해 주세요")
                             .font(.caption)
                             .foregroundStyle(.gray)
                     }
@@ -72,5 +72,7 @@ struct EventListView: View {
 struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
         EventListView()
+            .environment(\.locale, .init(identifier: "ko"))
+
     }
 }

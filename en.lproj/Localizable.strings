@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  DayCounter
+
+  Created by hyunjun on 2023/09/10.
+  
+*/
+
+// Onboarding
+"디데이 리스트 만들기" = "Make a D-day list";
+"소중한 날짜를 추가해 주세요" = "Please add a precious date";
+"리스트 관리하기" = "Managing the list";
+"편집을 눌러 리스트를 관리해 보세요" = "Let's manage the list";
+"시작하기" = "Countinue";
+
+// Event List
+"특별한 날을 추가해 주세요" = "Add a special day";
+
+// Add/Edit Event
+"날짜" = "Date";
+"제목" = "Title";
+"노트" = "Note";
+"디데이 추가" = "Add Event";
+"취소" = "Cancel";
+"저장" = "Save";

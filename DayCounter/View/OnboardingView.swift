@@ -30,7 +30,7 @@ struct OnboardingView: View {
             .padding(.horizontal, 50)
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
-            CustomButton(label: "시작하기", disable: false) {
+            CustomButton(label: "시작하기") {
                 HapticFeedback.shared.impact(style: .soft)
                 onboarding = false
             }
@@ -40,7 +40,8 @@ struct OnboardingView: View {
     }
     
     @ViewBuilder
-    func OnboardingList(icon: String, text: String, content: String) -> some View {
+    /// LocalizedStringKey 입력이 필요합니다.
+    func OnboardingList(icon: String, text: LocalizedStringKey, content: LocalizedStringKey) -> some View {
         HStack(spacing: 15) {
             Image(systemName: icon)
                 .font(.largeTitle)
@@ -60,5 +61,8 @@ struct OnboardingView: View {
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()
+            .environment(\.locale, .init(identifier: "ko"))
+        OnboardingView()
+            .environment(\.locale, .init(identifier: "en"))
     }
 }
