@@ -25,15 +25,15 @@ struct AddEventView: View {
                     HStack {
                         Text("날짜")
                         Button {
-                            withAnimation(.spring()) {
+                            withAnimation(.easeInOut) {
                                 openDatePicker.toggle()
                             }
                             HapticFeedback.shared.impact(style: .soft)
                         } label: {
                             Text("\(date.formatted(date: .abbreviated, time: .omitted))")
                                 .foregroundStyle(openDatePicker ? .mint : .primary)
-                                .padding(5)
-                                .padding(.horizontal, 5)
+                                .padding(6)
+                                .padding(.horizontal, 6)
                                 .background(
                                     RoundedRectangle(cornerRadius: 8, style: .continuous)
                                         .foregroundStyle(.thinMaterial)
@@ -45,7 +45,7 @@ struct AddEventView: View {
                     if openDatePicker {
                         DatePicker("", selection: $date, displayedComponents: .date)
                             .datePickerStyle(.wheel)
-                            .padding(.leading, -10)
+                            .padding(.leading, -16)
                     }
                 }
                 Section {

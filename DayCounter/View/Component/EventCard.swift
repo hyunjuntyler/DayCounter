@@ -28,23 +28,25 @@ struct EventCard: View {
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
                     .foregroundStyle(.mint)
-                    .padding(20)
+                    .padding(16)
                     .background(
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
                             .foregroundColor(Color(.systemGray6))
                     )
+                    .padding(.leading, -5)
+
                 Spacer()
-                VStack(alignment: .trailing) {
+                VStack(alignment: .trailing, spacing: 8) {
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
-                        .font(.footnote)
+                        .font(.caption)
                         .foregroundStyle(Color(.systemGray2))
-                    Spacer()
                     Text("\(event.title)")
                         .font(.headline)
                         .foregroundColor(.primary)
                         .fontWeight(.semibold)
+                        .lineLimit(1)
                 }
-                .padding(.vertical, 20)
+                .padding(.vertical, 5)
             }
         }
         .buttonStyle(CustomButtonStyle())
