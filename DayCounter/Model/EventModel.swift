@@ -69,16 +69,16 @@ class EventModel: ObservableObject {
         }
     }
     
-    // MARK: Save, Load items in User Defaults
+    // MARK: Private func() Save, Load items in User Defaults
     
-    func saveItems() {
+    private func saveItems() {
         let encoder = JSONEncoder()
         if let encodedData = try? encoder.encode(events) {
             UserDefaults.standard.set(encodedData, forKey: "EventItems")
         }
     }
     
-    func loadItems() {
+    private func loadItems() {
         if let savedData = UserDefaults.standard.data(forKey: "EventItems") {
             let decoder = JSONDecoder()
             if let decodedData = try? decoder.decode([Event].self, from: savedData) {

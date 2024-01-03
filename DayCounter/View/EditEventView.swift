@@ -44,8 +44,10 @@ struct EditEventView: View {
                         }
                     }
                     if openDatePicker {
-                        DatePicker("Date", selection: $date, displayedComponents: .date)
+                        DatePicker("", selection: $date, displayedComponents: .date)
+                            .labelsHidden()
                             .datePickerStyle(.wheel)
+                            .frame(maxWidth: .infinity)
                     }
                 }
                 Section {
@@ -117,4 +119,14 @@ struct EditEventView: View {
             }
         }
     }
+}
+
+#Preview("한국어") {
+    EventListView()
+        .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("영어") {
+    EventListView()
+        .environment(\.locale, .init(identifier: "en"))
 }

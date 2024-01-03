@@ -44,8 +44,9 @@ struct AddEventView: View {
                     }
                     if openDatePicker {
                         DatePicker("", selection: $date, displayedComponents: .date)
+                            .labelsHidden()
                             .datePickerStyle(.wheel)
-                            .padding(.leading, -16)
+                            .frame(maxWidth: .infinity)
                     }
                 }
                 Section {
@@ -101,11 +102,12 @@ struct AddEventView: View {
     }
 }
 
-struct AddEventView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddEventView(eventModel: EventModel())
-            .environment(\.locale, .init(identifier: "ko"))
-        AddEventView(eventModel: EventModel())
-            .environment(\.locale, .init(identifier: "en"))
-    }
+#Preview("한국어") {
+    AddEventView(eventModel: EventModel())
+        .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("영어") {
+    AddEventView(eventModel: EventModel())
+        .environment(\.locale, .init(identifier: "en"))
 }

@@ -14,16 +14,6 @@
         }
       }
     },
-    "Date" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date"
-          }
-        }
-      }
-    },
     "Day Counter" : {
       "localizations" : {
         "en" : {
