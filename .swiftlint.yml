@@ -1,0 +1,7 @@
+disabled_rules: # 실행에서 제외할 룰
+  - trailing_whitespace
+  - comment_spacing
+  - identifier_name
+  
+opt_in_rules: # 일부 룰은 옵션이라 아래에 추가해야 한다
+

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddEventView: View {
-    
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var eventModel: EventModel
@@ -82,12 +81,12 @@ struct AddEventView: View {
             .navigationTitle("디데이 추가")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem (placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button("취소") {
                         dismiss()
                     }
                 }
-                ToolbarItem (placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         let item = Event(date: date, title: title, note: note)
                         eventModel.addItem(item: item)

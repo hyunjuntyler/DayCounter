@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EventListView: View {
-    
     @ObservedObject var eventModel = EventModel()
     @State private var addEventView = false
     

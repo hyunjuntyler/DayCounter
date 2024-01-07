@@ -13,15 +13,7 @@ struct Event: Identifiable, Encodable, Decodable {
     var date: Date
     var title: String
     var note: String
-    
-    init(id: UUID = UUID(), date: Date, title: String, note: String) {
-        self.id = id
-        self.date = date
-        self.title = title
-        self.note = note
-    }
 }
-
 
 class EventModel: ObservableObject {
     
@@ -56,14 +48,14 @@ class EventModel: ObservableObject {
     // MARK: List onDelete, onMove 의 perform: 뒤에 들어가는 함수
     
     func delete(at: IndexSet) {
-        withAnimation() {
+        withAnimation {
             events.remove(atOffsets: at)
             saveItems()
         }
     }
     
     func move(from: IndexSet, to: Int) {
-        withAnimation() {
+        withAnimation {
             events.move(fromOffsets: from, toOffset: to)
             saveItems()
         }

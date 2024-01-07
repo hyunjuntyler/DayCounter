@@ -8,7 +8,6 @@
 import SwiftUI
 
 class HapticFeedback {
-    
     static let shared = HapticFeedback()
     
     func notification(type: UINotificationFeedbackGenerator.FeedbackType) {

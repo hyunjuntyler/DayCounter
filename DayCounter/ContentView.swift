@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @AppStorage("onboarding") var onboarding: Bool = true
     
     init() {

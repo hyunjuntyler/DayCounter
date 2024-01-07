@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EventCard: View {
-    
     @State private var editEventView = false
     var event: Event
     @ObservedObject var eventModel: EventModel

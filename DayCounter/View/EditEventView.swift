@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EditEventView: View {
-    
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var eventModel: EventModel
@@ -28,7 +27,7 @@ struct EditEventView: View {
                         Text("날짜")
                         Spacer()
                         Button {
-                            withAnimation() {
+                            withAnimation {
                                 openDatePicker.toggle()
                             }
                             HapticFeedback.shared.impact(style: .soft)
@@ -101,12 +100,12 @@ struct EditEventView: View {
             .navigationTitle("디데이 편집")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem (placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button("취소") {
                         dismiss()
                     }
                 }
-                ToolbarItem (placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         let editedItem = Event(id: id, date: date, title: title, note: note)
                         eventModel.editItem(item: editedItem)
