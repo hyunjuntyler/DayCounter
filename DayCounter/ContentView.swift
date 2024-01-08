@@ -48,11 +48,12 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environment(\.locale, .init(identifier: "ko"))
-        ContentView()
-            .environment(\.locale, .init(identifier: "en"))
-    }
+#Preview("한국어") {
+    ContentView()
+        .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("영어") {
+    ContentView()
+        .environment(\.locale, .init(identifier: "en"))
 }

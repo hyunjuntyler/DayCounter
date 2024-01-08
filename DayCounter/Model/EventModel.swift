@@ -23,7 +23,7 @@ class EventModel: ObservableObject {
         loadItems()
     }
     
-    // MARK: Basic Functions
+    // MARK: Functions
     
     func addItem(item: Event) {
         events.append(item)

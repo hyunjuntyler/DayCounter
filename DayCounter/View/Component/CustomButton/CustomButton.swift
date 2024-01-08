@@ -36,10 +36,8 @@ struct CustomButton: View {
     }
 }
 
-struct CustomButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomButton(label: "시작하기") {
-            //action here
-        }
+#Preview {
+    CustomButton(label: "시작하기") {
+        // action
     }
 }

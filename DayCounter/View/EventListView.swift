@@ -68,10 +68,12 @@ struct EventListView: View {
     }
 }
 
-struct EventListView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventListView()
-            .environment(\.locale, .init(identifier: "ko"))
+#Preview("한국어") {
+    EventListView()
+        .environment(\.locale, .init(identifier: "ko"))
+}
 
-    }
+#Preview("영어") {
+    EventListView()
+        .environment(\.locale, .init(identifier: "en"))
 }

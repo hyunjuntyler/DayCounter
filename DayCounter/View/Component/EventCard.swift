@@ -33,7 +33,7 @@ struct EventCard: View {
                             .foregroundColor(Color(.systemGray6))
                     )
                     .padding(.leading, -5)
-
+                
                 Spacer()
                 VStack(alignment: .trailing, spacing: 8) {
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
@@ -55,20 +55,20 @@ struct EventCard: View {
     }
     
     /// 디데이 계산 함수
-
+    
     func calculateDays(to dateCount: Date) -> Int {
         let calendar = Calendar.current
-
+        
         let start = calendar.startOfDay(for: Date())
         let end = calendar.startOfDay(for: dateCount)
-
+        
         let components = calendar.dateComponents([.day], from: start, to: end)
-
+        
         return components.day ?? 0
     }
-
+    
     /// 디데이에 따른 표시 설정
-
+    
     func formatDayCount(_ days: Int) -> String {
         if days == 0 {
             return "D-Day"
@@ -80,10 +80,16 @@ struct EventCard: View {
     }
 }
 
-struct EventCard_Previews: PreviewProvider {
-    static var previews: some View {
-        List {
-            EventCard(event: Event(date: Date(), title: "테스트", note: "테스트입니다"), eventModel: EventModel())
-        }
+#Preview("한국어") {
+    List {
+        EventCard(event: Event(date: Date(), title: "테스트", note: "테스트"), eventModel: EventModel())
     }
+    .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("영어") {
+    List {
+        EventCard(event: Event(date: Date(), title: "Test", note: "Test"), eventModel: EventModel())
+    }
+    .environment(\.locale, .init(identifier: "en"))
 }

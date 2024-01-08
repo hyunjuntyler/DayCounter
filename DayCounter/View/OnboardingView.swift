@@ -57,11 +57,12 @@ struct OnboardingView: View {
     }
 }
 
-struct OnboardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingView()
-            .environment(\.locale, .init(identifier: "ko"))
-        OnboardingView()
-            .environment(\.locale, .init(identifier: "en"))
-    }
+#Preview("한국어") {
+    OnboardingView()
+        .environment(\.locale, .init(identifier: "ko"))
+}
+
+#Preview("영어") {
+    OnboardingView()
+        .environment(\.locale, .init(identifier: "en"))
 }
