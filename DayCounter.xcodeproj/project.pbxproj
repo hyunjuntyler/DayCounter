@@ -66,10 +66,10 @@
 		293C6B052A95128500A63324 = {
 			isa = PBXGroup;
 			children = (
+				293C6B1F2A9512D700A63324 /* README.md */,
 				29560A2E2B491BC600218982 /* .swiftlint.yml */,
 				F06CACDE2B4557030024E366 /* Localizable.xcstrings */,
 				F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */,
-				293C6B1F2A9512D700A63324 /* README.md */,
 				293C6B102A95128500A63324 /* DayCounter */,
 				293C6B0F2A95128500A63324 /* Products */,
 			);
@@ -93,8 +93,8 @@
 				293C6B242A9516AC00A63324 /* Model */,
 				293C6B212A9514E200A63324 /* Utility */,
 				2946849C2B56F44A003DDF79 /* Extension */,
-				293C6B152A95128600A63324 /* Assets.xcassets */,
 				2946849B2B56F3D9003DDF79 /* Font */,
+				293C6B152A95128600A63324 /* Assets.xcassets */,
 				293C6B172A95128600A63324 /* Preview Content */,
 			);
 			path = DayCounter;
@@ -434,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = DayCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -466,7 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = DayCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
