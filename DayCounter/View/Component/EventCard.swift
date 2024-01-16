@@ -40,7 +40,7 @@ struct EventCard: View {
                         .font(.caption)
                         .foregroundStyle(Color(.systemGray2))
                     Text("\(event.title)")
-                        .font(.headline)
+                        .font(.tossFaceMedium)
                         .foregroundColor(.primary)
                         .fontWeight(.semibold)
                         .lineLimit(1)
@@ -82,7 +82,7 @@ struct EventCard: View {
 
 #Preview("한국어") {
     List {
-        EventCard(event: Event(date: Date(), title: "테스트", note: "테스트"), eventModel: EventModel())
+        EventCard(event: Event(date: Date(), title: "테스트🤢", note: "테스트🤢"), eventModel: EventModel())
     }
     .environment(\.locale, .init(identifier: "ko"))
 }

@@ -21,6 +21,8 @@
 		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
 		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
 		293C6B382A951C9800A63324 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B372A951C9800A63324 /* EventCard.swift */; };
+		2946849E2B56F458003DDF79 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946849D2B56F458003DDF79 /* FontExtension.swift */; };
+		294684A02B56F653003DDF79 /* TossFaceFontMac.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */; };
 		29560A2F2B491BC600218982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 29560A2E2B491BC600218982 /* .swiftlint.yml */; };
 		F06CACDF2B4557030024E366 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F06CACDE2B4557030024E366 /* Localizable.xcstrings */; };
 		F06CACE12B455ADD0024E366 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */; };
@@ -43,6 +45,8 @@
 		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		293C6B372A951C9800A63324 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2946849D2B56F458003DDF79 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TossFaceFontMac.ttf; sourceTree = "<group>"; };
 		29560A2E2B491BC600218982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F06CACDE2B4557030024E366 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 				293C6B272A9517A000A63324 /* View */,
 				293C6B242A9516AC00A63324 /* Model */,
 				293C6B212A9514E200A63324 /* Utility */,
+				2946849C2B56F44A003DDF79 /* Extension */,
 				293C6B152A95128600A63324 /* Assets.xcassets */,
+				2946849B2B56F3D9003DDF79 /* Font */,
 				293C6B172A95128600A63324 /* Preview Content */,
 			);
 			path = DayCounter;
@@ -146,6 +152,22 @@
 				293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		2946849B2B56F3D9003DDF79 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2946849C2B56F44A003DDF79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2946849D2B56F458003DDF79 /* FontExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29560A2F2B491BC600218982 /* .swiftlint.yml in Resources */,
+				294684A02B56F653003DDF79 /* TossFaceFontMac.ttf in Resources */,
 				293C6B202A9512D700A63324 /* README.md in Resources */,
 				F06CACE12B455ADD0024E366 /* InfoPlist.xcstrings in Resources */,
 				F06CACDF2B4557030024E366 /* Localizable.xcstrings in Resources */,
@@ -252,6 +275,7 @@
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
 				293C6B2F2A95184000A63324 /* CustomButtonStyle.swift in Sources */,
 				293C6B2C2A9517E900A63324 /* CustomButton.swift in Sources */,
+				2946849E2B56F458003DDF79 /* FontExtension.swift in Sources */,
 				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,

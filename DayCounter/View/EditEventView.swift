@@ -52,6 +52,7 @@ struct EditEventView: View {
                 Section {
                     HStack {
                         TextField("제목", text: $title)
+                            .font(.tossFaceSmall)
                         if !title.isEmpty {
                             Image(systemName: "multiply.circle.fill")
                                 .font(.callout)
@@ -63,6 +64,7 @@ struct EditEventView: View {
                     }
                     HStack {
                         TextField("노트", text: $note, axis: .vertical)
+                            .font(.tossFaceSmall)
                         if !note.isEmpty {
                             Image(systemName: "multiply.circle.fill")
                                 .font(.callout)
