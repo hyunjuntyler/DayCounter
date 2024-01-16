@@ -9,14 +9,7 @@ import SwiftUI
 
 struct CustomButton: View {
     var label: LocalizedStringKey
-    var disable: Bool
     var action: () -> Void
-    
-    init(label: LocalizedStringKey, disable: Bool = false, action: @escaping () -> Void) {
-        self.label = label
-        self.disable = disable
-        self.action = action
-    }
     
     var body: some View {
         Button(action: action) {
@@ -31,7 +24,6 @@ struct CustomButton: View {
                 )
         }
         .buttonStyle(CustomButtonStyle())
-        .disabled(disable)
         .padding(.horizontal, 25)
     }
 }
