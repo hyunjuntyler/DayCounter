@@ -11,9 +11,9 @@ struct AddEventView: View {
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var eventModel: EventModel
-    @State var date = Date()
-    @State var title = ""
-    @State var note = ""
+    @State private var date = Date()
+    @State private var title = ""
+    @State private var note = ""
     
     @State private var openDatePicker = false
     
@@ -27,7 +27,7 @@ struct AddEventView: View {
                             withAnimation(.easeInOut) {
                                 openDatePicker.toggle()
                             }
-                            HapticFeedback.shared.impact(style: .soft)
+                            Haptic.impact(style: .soft)
                         } label: {
                             Text("\(date.formatted(date: .abbreviated, time: .omitted))")
                                 .foregroundStyle(openDatePicker ? .mint : .primary)

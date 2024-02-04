@@ -16,7 +16,6 @@ struct Event: Identifiable, Encodable, Decodable {
 }
 
 class EventModel: ObservableObject {
-    
     @Published var events: [Event] = []
     
     init() {

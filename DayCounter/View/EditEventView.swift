@@ -30,7 +30,7 @@ struct EditEventView: View {
                             withAnimation {
                                 openDatePicker.toggle()
                             }
-                            HapticFeedback.shared.impact(style: .soft)
+                            Haptic.impact(style: .soft)
                         } label: {
                             Text("\(date.formatted(date: .abbreviated, time: .omitted))")
                                 .foregroundStyle(openDatePicker ? .mint : .primary)

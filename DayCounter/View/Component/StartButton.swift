@@ -1,5 +1,5 @@
 //
-//  CustomButton.swift
+//  StartButton.swift
 //  DayCounter
 //
 //  Created by hyunjun on 2023/08/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomButton: View {
+struct StartButton: View {
     var label: LocalizedStringKey
     var action: () -> Void
     
@@ -23,13 +23,22 @@ struct CustomButton: View {
                         .foregroundColor(.accentColor)
                 )
         }
-        .buttonStyle(CustomButtonStyle())
+        .buttonStyle(StartButtonStyle())
         .padding(.horizontal, 25)
     }
 }
 
+struct StartButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .opacity(configuration.isPressed ? 0.8 : 1)
+            .animation(.easeInOut, value: configuration.isPressed)
+    }
+}
+
 #Preview {
-    CustomButton(label: "시작하기") {
+    StartButton(label: "시작하기") {
         // action
     }
 }

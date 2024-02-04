@@ -29,8 +29,8 @@ struct OnboardingView: View {
             .padding(.horizontal, 50)
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
-            CustomButton(label: "시작하기") {
-                HapticFeedback.shared.impact(style: .soft)
+            StartButton(label: "시작하기") {
+                Haptic.impact(style: .soft)
                 onboarding = false
             }
             .padding(.bottom, 60)

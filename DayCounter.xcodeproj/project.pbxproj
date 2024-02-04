@@ -12,11 +12,10 @@
 		293C6B162A95128600A63324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B152A95128600A63324 /* Assets.xcassets */; };
 		293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B182A95128600A63324 /* Preview Assets.xcassets */; };
 		293C6B202A9512D700A63324 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B1F2A9512D700A63324 /* README.md */; };
-		293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* HapticFeedback.swift */; };
+		293C6B232A9515DB00A63324 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* Haptic.swift */; };
 		293C6B262A9516D200A63324 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B252A9516D200A63324 /* EventModel.swift */; };
 		293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B282A9517B200A63324 /* OnboardingView.swift */; };
-		293C6B2C2A9517E900A63324 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2B2A9517E900A63324 /* CustomButton.swift */; };
-		293C6B2F2A95184000A63324 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */; };
+		293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2B2A9517E900A63324 /* StartButton.swift */; };
 		293C6B322A951B9600A63324 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B312A951B9600A63324 /* EventListView.swift */; };
 		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
 		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
@@ -35,11 +34,10 @@
 		293C6B152A95128600A63324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293C6B182A95128600A63324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		293C6B1F2A9512D700A63324 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		293C6B222A9515DB00A63324 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		293C6B222A9515DB00A63324 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		293C6B252A9516D200A63324 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		293C6B282A9517B200A63324 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		293C6B2B2A9517E900A63324 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		293C6B2B2A9517E900A63324 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		293C6B312A951B9600A63324 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		293C6B332A951BEF00A63324 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
@@ -111,7 +109,7 @@
 		293C6B212A9514E200A63324 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				293C6B222A9515DB00A63324 /* HapticFeedback.swift */,
+				293C6B222A9515DB00A63324 /* Haptic.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -140,18 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				293C6B372A951C9800A63324 /* EventCard.swift */,
-				293C6B302A951B2100A63324 /* CustomButton */,
+				293C6B2B2A9517E900A63324 /* StartButton.swift */,
 			);
 			path = Component;
-			sourceTree = "<group>";
-		};
-		293C6B302A951B2100A63324 /* CustomButton */ = {
-			isa = PBXGroup;
-			children = (
-				293C6B2B2A9517E900A63324 /* CustomButton.swift */,
-				293C6B2E2A95184000A63324 /* CustomButtonStyle.swift */,
-			);
-			path = CustomButton;
 			sourceTree = "<group>";
 		};
 		2946849B2B56F3D9003DDF79 /* Font */ = {
@@ -273,13 +262,12 @@
 				293C6B322A951B9600A63324 /* EventListView.swift in Sources */,
 				293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
-				293C6B2F2A95184000A63324 /* CustomButtonStyle.swift in Sources */,
-				293C6B2C2A9517E900A63324 /* CustomButton.swift in Sources */,
+				293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */,
 				2946849E2B56F458003DDF79 /* FontExtension.swift in Sources */,
 				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
-				293C6B232A9515DB00A63324 /* HapticFeedback.swift in Sources */,
+				293C6B232A9515DB00A63324 /* Haptic.swift in Sources */,
 				293C6B382A951C9800A63324 /* EventCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

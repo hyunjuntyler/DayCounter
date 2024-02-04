@@ -18,7 +18,7 @@ struct EventCard: View {
         let dayCountString = formatDayCount(dayCount)
         
         Button {
-            HapticFeedback.shared.impact(style: .soft)
+            Haptic.impact(style: .soft)
             editEventView = true
         } label: {
             HStack {
@@ -48,7 +48,7 @@ struct EventCard: View {
                 .padding(.vertical, 5)
             }
         }
-        .buttonStyle(CustomButtonStyle())
+        .buttonStyle(StartButtonStyle())
         .sheet(isPresented: $editEventView) {
             EditEventView(eventModel: eventModel, date: event.date, title: event.title, note: event.note, id: event.id)
         }
@@ -82,7 +82,7 @@ struct EventCard: View {
 
 #Preview("한국어") {
     List {
-        EventCard(event: Event(date: Date(), title: "테스트🤢", note: "테스트🤢"), eventModel: EventModel())
+        EventCard(event: Event(date: Date(), title: "테스트", note: "테스트"), eventModel: EventModel())
     }
     .environment(\.locale, .init(identifier: "ko"))
 }

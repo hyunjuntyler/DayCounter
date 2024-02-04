@@ -13,57 +13,53 @@ struct EventListView: View {
     
     var body: some View {
         NavigationStack {
-            dayCounterList // List View 따로 빼놓음
-                .navigationTitle("Day Counter")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        EditButton()
-                            .disabled(eventModel.events.isEmpty)
+            List {
+                Section {
+                    ForEach(eventModel.events) { item in
+                        EventCard(event: item, eventModel: eventModel)
                     }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            addEventView = true
-                            HapticFeedback.shared.impact(style: .soft)
-                        } label: {
-                            Image(systemName: "plus")
-                                .fontWeight(.medium)
+                    .onDelete(perform: eventModel.delete)
+                    .onMove(perform: eventModel.move)
+                }
+                
+                if eventModel.events.isEmpty {
+                    Section {
+                        VStack(spacing: 5) {
+                            Image(systemName: "calendar.badge.plus")
+                                .font(.title2)
+                                .foregroundStyle(.mint, .gray)
+                            Text("특별한 날을 추가해 주세요")
+                                .font(.caption)
+                                .foregroundStyle(.gray)
                         }
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            Haptic.impact(style: .soft)
+                            addEventView = true
+                        }
+                        .padding(10)
                     }
                 }
+            }
+            .navigationTitle("Day Counter")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                        .disabled(eventModel.events.isEmpty)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        addEventView = true
+                        Haptic.impact(style: .soft)
+                    } label: {
+                        Image(systemName: "plus")
+                            .fontWeight(.medium)
+                    }
+                }
+            }
         }
         .sheet(isPresented: $addEventView) {
             AddEventView(eventModel: eventModel)
-        }
-    }
-    
-    @ViewBuilder
-    var dayCounterList: some View {
-        List {
-            Section {
-                ForEach(eventModel.events) { item in
-                    EventCard(event: item, eventModel: eventModel)
-                }
-                .onDelete(perform: eventModel.delete)
-                .onMove(perform: eventModel.move)
-            }
-            Section {
-                if eventModel.events.isEmpty {
-                    VStack(spacing: 5) {
-                        Image(systemName: "calendar.badge.plus")
-                            .font(.title2)
-                            .foregroundStyle(.mint, .gray)
-                        Text("특별한 날을 추가해 주세요")
-                            .font(.caption)
-                            .foregroundStyle(.gray)
-                    }
-                    .frame(maxWidth: .infinity)
-                    .onTapGesture {
-                        HapticFeedback.shared.impact(style: .soft)
-                        addEventView = true
-                    }
-                    .padding(10)
-                }
-            }
         }
     }
 }
