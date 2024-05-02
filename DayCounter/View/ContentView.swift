@@ -11,28 +11,24 @@ struct ContentView: View {
     @AppStorage("onboarding") var onboarding: Bool = true
     
     init() {
-        var titleFont = UIFont.preferredFont(forTextStyle: .largeTitle) // the default large title font
+        var titleFont = UIFont.preferredFont(forTextStyle: .largeTitle)
         titleFont = UIFont(
             descriptor:
                 titleFont.fontDescriptor
-                .withDesign(.rounded)? // make rounded
-                .withSymbolicTraits(.traitBold) // make bold
-            ??
-            titleFont.fontDescriptor, // return the normal title if customization failed
+                .withDesign(.rounded)?
+                .withSymbolicTraits(.traitBold) ?? titleFont.fontDescriptor,
             size: titleFont.pointSize
         )
-        var inlineFont = UIFont.preferredFont(forTextStyle: .body) // the default large body
+        
+        var inlineFont = UIFont.preferredFont(forTextStyle: .body)
         inlineFont = UIFont(
             descriptor:
                 inlineFont.fontDescriptor
-                .withDesign(.rounded)? // make rounded
-                .withSymbolicTraits(.traitBold) // make bold
-            ??
-            inlineFont.fontDescriptor, // return the normal title if customization failed
+                .withDesign(.rounded)?
+                .withSymbolicTraits(.traitBold) ?? inlineFont.fontDescriptor,
             size: inlineFont.pointSize
         )
         
-        // set the rounded font
         UINavigationBar.appearance().largeTitleTextAttributes = [.font: titleFont]
         UINavigationBar.appearance().titleTextAttributes = [.font: inlineFont]
         

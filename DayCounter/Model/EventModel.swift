@@ -21,9 +21,7 @@ class EventModel: ObservableObject {
     init() {
         loadItems()
     }
-    
-    // MARK: Functions
-    
+        
     func addItem(item: Event) {
         events.append(item)
         saveItems()
@@ -43,9 +41,7 @@ class EventModel: ObservableObject {
             saveItems()
         }
     }
-    
-    // MARK: List onDelete, onMove 의 perform: 뒤에 들어가는 함수
-    
+        
     func delete(at: IndexSet) {
         withAnimation {
             events.remove(atOffsets: at)
@@ -59,9 +55,11 @@ class EventModel: ObservableObject {
             saveItems()
         }
     }
-    
-    // MARK: Private func() Save, Load items in User Defaults
-    
+}
+
+// MARK: - Persistence
+
+extension EventModel {
     private func saveItems() {
         let encoder = JSONEncoder()
         if let encodedData = try? encoder.encode(events) {

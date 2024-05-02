@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EventCard: View {
+    @ObservedObject var eventModel: EventModel
     @State private var editEventView = false
     var event: Event
-    @ObservedObject var eventModel: EventModel
     
     var body: some View {
         
@@ -35,6 +35,7 @@ struct EventCard: View {
                     .padding(.leading, -5)
                 
                 Spacer()
+                
                 VStack(alignment: .trailing, spacing: 8) {
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         .font(.caption)
@@ -53,10 +54,8 @@ struct EventCard: View {
             EditEventView(eventModel: eventModel, date: event.date, title: event.title, note: event.note, id: event.id)
         }
     }
-    
-    /// 디데이 계산 함수
-    
-    func calculateDays(to dateCount: Date) -> Int {
+        
+    private func calculateDays(to dateCount: Date) -> Int {
         let calendar = Calendar.current
         
         let start = calendar.startOfDay(for: Date())
@@ -66,10 +65,8 @@ struct EventCard: View {
         
         return components.day ?? 0
     }
-    
-    /// 디데이에 따른 표시 설정
-    
-    func formatDayCount(_ days: Int) -> String {
+        
+    private func formatDayCount(_ days: Int) -> String {
         if days == 0 {
             return "D-Day"
         } else if days > 0 {
@@ -82,14 +79,14 @@ struct EventCard: View {
 
 #Preview("한국어") {
     List {
-        EventCard(event: Event(date: Date(), title: "테스트", note: "테스트"), eventModel: EventModel())
+        EventCard(eventModel: EventModel(), event: Event(date: Date(), title: "테스트", note: "테스트"))
     }
     .environment(\.locale, .init(identifier: "ko"))
 }
 
 #Preview("영어") {
     List {
-        EventCard(event: Event(date: Date(), title: "Test", note: "Test"), eventModel: EventModel())
+        EventCard(eventModel: EventModel(), event: Event(date: Date(), title: "Test", note: "Test"))
     }
     .environment(\.locale, .init(identifier: "en"))
 }

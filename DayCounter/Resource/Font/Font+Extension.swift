@@ -1,5 +1,5 @@
 //
-//  FontExtension.swift
+//  Font+Extension.swift
 //  DayCounter
 //
 //  Created by hyunjun on 1/17/24.

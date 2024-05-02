@@ -16,7 +16,7 @@ struct EventListView: View {
             List {
                 Section {
                     ForEach(eventModel.events) { item in
-                        EventCard(event: item, eventModel: eventModel)
+                        EventCard(eventModel: eventModel, event: item)
                     }
                     .onDelete(perform: eventModel.delete)
                     .onMove(perform: eventModel.move)

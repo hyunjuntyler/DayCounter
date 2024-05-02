@@ -39,7 +39,6 @@ struct OnboardingView: View {
     }
     
     @ViewBuilder
-    /// LocalizedStringKey 입력이 필요합니다.
     func onboardingList(icon: String, text: LocalizedStringKey, content: LocalizedStringKey) -> some View {
         HStack(spacing: 15) {
             Image(systemName: icon)

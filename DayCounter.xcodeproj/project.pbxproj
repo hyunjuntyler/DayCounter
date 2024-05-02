@@ -10,7 +10,6 @@
 		293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B112A95128500A63324 /* DayCounterApp.swift */; };
 		293C6B142A95128500A63324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B132A95128500A63324 /* ContentView.swift */; };
 		293C6B162A95128600A63324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B152A95128600A63324 /* Assets.xcassets */; };
-		293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B182A95128600A63324 /* Preview Assets.xcassets */; };
 		293C6B202A9512D700A63324 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B1F2A9512D700A63324 /* README.md */; };
 		293C6B232A9515DB00A63324 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* Haptic.swift */; };
 		293C6B262A9516D200A63324 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B252A9516D200A63324 /* EventModel.swift */; };
@@ -20,7 +19,7 @@
 		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
 		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
 		293C6B382A951C9800A63324 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B372A951C9800A63324 /* EventCard.swift */; };
-		2946849E2B56F458003DDF79 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946849D2B56F458003DDF79 /* FontExtension.swift */; };
+		2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946849D2B56F458003DDF79 /* Font+Extension.swift */; };
 		294684A02B56F653003DDF79 /* TossFaceFontMac.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */; };
 		29560A2F2B491BC600218982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 29560A2E2B491BC600218982 /* .swiftlint.yml */; };
 		F06CACDF2B4557030024E366 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F06CACDE2B4557030024E366 /* Localizable.xcstrings */; };
@@ -32,7 +31,6 @@
 		293C6B112A95128500A63324 /* DayCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCounterApp.swift; sourceTree = "<group>"; };
 		293C6B132A95128500A63324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		293C6B152A95128600A63324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		293C6B182A95128600A63324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		293C6B1F2A9512D700A63324 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		293C6B222A9515DB00A63324 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		293C6B252A9516D200A63324 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -42,8 +40,8 @@
 		293C6B332A951BEF00A63324 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
 		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
 		293C6B372A951C9800A63324 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
-		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2946849D2B56F458003DDF79 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2946849D2B56F458003DDF79 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TossFaceFontMac.ttf; sourceTree = "<group>"; };
 		29560A2E2B491BC600218982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F06CACDE2B4557030024E366 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -66,8 +64,6 @@
 			children = (
 				293C6B1F2A9512D700A63324 /* README.md */,
 				29560A2E2B491BC600218982 /* .swiftlint.yml */,
-				F06CACDE2B4557030024E366 /* Localizable.xcstrings */,
-				F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */,
 				293C6B102A95128500A63324 /* DayCounter */,
 				293C6B0F2A95128500A63324 /* Products */,
 			);
@@ -84,26 +80,13 @@
 		293C6B102A95128500A63324 /* DayCounter */ = {
 			isa = PBXGroup;
 			children = (
-				293C6B3B2A952B7600A63324 /* Info.plist */,
-				293C6B112A95128500A63324 /* DayCounterApp.swift */,
-				293C6B132A95128500A63324 /* ContentView.swift */,
+				295757952BE3323B00F48BE5 /* App */,
 				293C6B272A9517A000A63324 /* View */,
 				293C6B242A9516AC00A63324 /* Model */,
 				293C6B212A9514E200A63324 /* Utility */,
-				2946849C2B56F44A003DDF79 /* Extension */,
-				2946849B2B56F3D9003DDF79 /* Font */,
-				293C6B152A95128600A63324 /* Assets.xcassets */,
-				293C6B172A95128600A63324 /* Preview Content */,
+				295757942BE3318F00F48BE5 /* Resource */,
 			);
 			path = DayCounter;
-			sourceTree = "<group>";
-		};
-		293C6B172A95128600A63324 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				293C6B182A95128600A63324 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		293C6B212A9514E200A63324 /* Utility */ = {
@@ -125,6 +108,7 @@
 		293C6B272A9517A000A63324 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				293C6B132A95128500A63324 /* ContentView.swift */,
 				293C6B282A9517B200A63324 /* OnboardingView.swift */,
 				293C6B312A951B9600A63324 /* EventListView.swift */,
 				293C6B332A951BEF00A63324 /* AddEventView.swift */,
@@ -147,16 +131,37 @@
 			isa = PBXGroup;
 			children = (
 				2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */,
+				2946849D2B56F458003DDF79 /* Font+Extension.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
 		};
-		2946849C2B56F44A003DDF79 /* Extension */ = {
+		295757942BE3318F00F48BE5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				2946849D2B56F458003DDF79 /* FontExtension.swift */,
+				2946849B2B56F3D9003DDF79 /* Font */,
+				293C6B152A95128600A63324 /* Assets.xcassets */,
 			);
-			path = Extension;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		295757952BE3323B00F48BE5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B112A95128500A63324 /* DayCounterApp.swift */,
+				293C6B3B2A952B7600A63324 /* Info.plist */,
+				295757962BE3326800F48BE5 /* Localization */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		295757962BE3326800F48BE5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F06CACDE2B4557030024E366 /* Localizable.xcstrings */,
+				F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +229,6 @@
 				293C6B202A9512D700A63324 /* README.md in Resources */,
 				F06CACE12B455ADD0024E366 /* InfoPlist.xcstrings in Resources */,
 				F06CACDF2B4557030024E366 /* Localizable.xcstrings in Resources */,
-				293C6B192A95128600A63324 /* Preview Assets.xcassets in Resources */,
 				293C6B162A95128600A63324 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +267,7 @@
 				293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
 				293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */,
-				2946849E2B56F458003DDF79 /* FontExtension.swift in Sources */,
+				2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */,
 				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
@@ -406,11 +410,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DayCounter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DayCounter/Info.plist;
+				INFOPLIST_FILE = DayCounter/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "데이카운터";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -438,11 +442,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DayCounter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 77745NX67K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DayCounter/Info.plist;
+				INFOPLIST_FILE = DayCounter/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "데이카운터";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
