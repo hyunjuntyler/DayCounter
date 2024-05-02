@@ -23,17 +23,8 @@ struct StartButton: View {
                         .foregroundColor(.accentColor)
                 )
         }
-        .buttonStyle(StartButtonStyle())
+        .buttonStyle(ScaleDownButtonStyle())
         .padding(.horizontal, 25)
-    }
-}
-
-struct StartButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
-            .opacity(configuration.isPressed ? 0.8 : 1)
-            .animation(.easeInOut, value: configuration.isPressed)
     }
 }
 

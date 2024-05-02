@@ -49,7 +49,7 @@ struct EventCard: View {
                 .padding(.vertical, 5)
             }
         }
-        .buttonStyle(StartButtonStyle())
+        .buttonStyle(ScaleDownButtonStyle())
         .sheet(isPresented: $editEventView) {
             EditEventView(eventModel: eventModel, date: event.date, title: event.title, note: event.note, id: event.id)
         }

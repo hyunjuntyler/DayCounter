@@ -23,7 +23,10 @@ struct EventListView: View {
                 }
                 
                 if eventModel.events.isEmpty {
-                    Section {
+                    Button {
+                        Haptic.impact(style: .soft)
+                        addEventView = true
+                    } label: {
                         VStack(spacing: 5) {
                             Image(systemName: "calendar.badge.plus")
                                 .font(.title2)
@@ -33,12 +36,9 @@ struct EventListView: View {
                                 .foregroundStyle(.gray)
                         }
                         .frame(maxWidth: .infinity)
-                        .onTapGesture {
-                            Haptic.impact(style: .soft)
-                            addEventView = true
-                        }
                         .padding(10)
                     }
+                    .buttonStyle(ScaleDownButtonStyle())
                 }
             }
             .navigationTitle("Day Counter")

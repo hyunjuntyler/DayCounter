@@ -22,6 +22,8 @@
 		2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946849D2B56F458003DDF79 /* Font+Extension.swift */; };
 		294684A02B56F653003DDF79 /* TossFaceFontMac.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */; };
 		29560A2F2B491BC600218982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 29560A2E2B491BC600218982 /* .swiftlint.yml */; };
+		295757982BE3353500F48BE5 /* OnboardingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295757972BE3353500F48BE5 /* OnboardingList.swift */; };
+		2957579C2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957579B2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift */; };
 		F06CACDF2B4557030024E366 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F06CACDE2B4557030024E366 /* Localizable.xcstrings */; };
 		F06CACE12B455ADD0024E366 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		2946849D2B56F458003DDF79 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TossFaceFontMac.ttf; sourceTree = "<group>"; };
 		29560A2E2B491BC600218982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		295757972BE3353500F48BE5 /* OnboardingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingList.swift; sourceTree = "<group>"; };
+		2957579B2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDownButtonStyle.swift; sourceTree = "<group>"; };
 		F06CACDE2B4557030024E366 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,7 @@
 		293C6B212A9514E200A63324 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2957579A2BE3371200F48BE5 /* ButtonStyle */,
 				293C6B222A9515DB00A63324 /* Haptic.swift */,
 			);
 			path = Utility;
@@ -121,6 +126,7 @@
 		293C6B2A2A9517D700A63324 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				295757972BE3353500F48BE5 /* OnboardingList.swift */,
 				293C6B372A951C9800A63324 /* EventCard.swift */,
 				293C6B2B2A9517E900A63324 /* StartButton.swift */,
 			);
@@ -162,6 +168,14 @@
 				F06CACE02B455ADD0024E366 /* InfoPlist.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		2957579A2BE3371200F48BE5 /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				2957579B2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift */,
+			);
+			path = ButtonStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 			files = (
 				293C6B142A95128500A63324 /* ContentView.swift in Sources */,
 				293C6B322A951B9600A63324 /* EventListView.swift in Sources */,
+				295757982BE3353500F48BE5 /* OnboardingList.swift in Sources */,
 				293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
 				293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */,
@@ -273,6 +288,7 @@
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
 				293C6B232A9515DB00A63324 /* Haptic.swift in Sources */,
 				293C6B382A951C9800A63324 /* EventCard.swift in Sources */,
+				2957579C2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

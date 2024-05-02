@@ -23,8 +23,8 @@ struct OnboardingView: View {
             .fontDesign(.rounded)
             
             VStack(alignment: .leading, spacing: 30) {
-                onboardingList(icon: "calendar.badge.plus", text: "디데이 리스트 만들기", content: "소중한 날짜를 추가해 주세요")
-                onboardingList(icon: "list.dash", text: "리스트 관리하기", content: "편집을 눌러 리스트를 관리해 보세요")
+                OnboardingList(icon: "calendar.badge.plus", text: "디데이 리스트 만들기", content: "소중한 날짜를 추가해 주세요")
+                OnboardingList(icon: "list.dash", text: "리스트 관리하기", content: "편집을 눌러 리스트를 관리해 보세요")
             }
             .padding(.horizontal, 50)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,23 +36,6 @@ struct OnboardingView: View {
             .padding(.bottom, 60)
         }
         .padding(.top, 80)
-    }
-    
-    @ViewBuilder
-    func onboardingList(icon: String, text: LocalizedStringKey, content: LocalizedStringKey) -> some View {
-        HStack(spacing: 15) {
-            Image(systemName: icon)
-                .font(.largeTitle)
-                .foregroundColor(.accentColor)
-            VStack(alignment: .leading, spacing: 5) {
-                Text(text)
-                    .font(.body)
-                    .bold()
-                Text(content)
-                    .foregroundColor(.secondary)
-                    .font(.footnote)
-            }
-        }
     }
 }
 
