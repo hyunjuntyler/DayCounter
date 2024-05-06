@@ -91,7 +91,7 @@ struct AddEventView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         let item = Event(date: date, title: title, note: note)
-                        eventModel.addItem(item: item)
+                        eventModel.addEvent(item)
                         dismiss()
                     } label: {
                         Text("저장")

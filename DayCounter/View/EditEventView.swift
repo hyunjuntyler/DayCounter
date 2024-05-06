@@ -93,7 +93,7 @@ struct EditEventView: View {
                     .alert("정말 삭제하시겠어요?", isPresented: $alert) {
                         Button("삭제", role: .destructive) {
                             let editedItem = Event(id: id, date: date, title: title, note: note)
-                            eventModel.deleteItem(item: editedItem)
+                            eventModel.deleteEvent( editedItem)
                             dismiss()
                         }
                     }
@@ -110,7 +110,7 @@ struct EditEventView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         let editedItem = Event(id: id, date: date, title: title, note: note)
-                        eventModel.editItem(item: editedItem)
+                        eventModel.editEvent(editedItem)
                         dismiss()
                     } label: {
                          Text("저장")

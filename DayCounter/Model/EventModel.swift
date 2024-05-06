@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Event: Identifiable, Encodable, Decodable {
+struct Event: Identifiable, Codable {
     var id = UUID()
     var date: Date
     var title: String
@@ -19,40 +19,40 @@ class EventModel: ObservableObject {
     @Published var events: [Event] = []
     
     init() {
-        loadItems()
+        loadEvents()
     }
         
-    func addItem(item: Event) {
-        events.append(item)
-        saveItems()
+    func addEvent(_ event: Event) {
+        events.append(event)
+        saveEvents()
     }
     
-    func editItem(item: Event) {
-        if let index = events.firstIndex(where: { $0.id == item.id }) {
+    func editEvent(_ event: Event) {
+        if let index = events.firstIndex(where: { $0.id == event.id }) {
             print("Item Index: \(index)")
-            events[index] = item
-            saveItems()
+            events[index] = event
+            saveEvents()
         }
     }
     
-    func deleteItem(item: Event) {
-        if let index = events.firstIndex(where: { $0.id == item.id }) {
+    func deleteEvent(_ event: Event) {
+        if let index = events.firstIndex(where: { $0.id == event.id }) {
             events.remove(at: index)
-            saveItems()
+            saveEvents()
         }
     }
         
     func delete(at: IndexSet) {
         withAnimation {
             events.remove(atOffsets: at)
-            saveItems()
+            saveEvents()
         }
     }
     
     func move(from: IndexSet, to: Int) {
         withAnimation {
             events.move(fromOffsets: from, toOffset: to)
-            saveItems()
+            saveEvents()
         }
     }
 }
@@ -60,15 +60,15 @@ class EventModel: ObservableObject {
 // MARK: - Persistence
 
 extension EventModel {
-    private func saveItems() {
+    private func saveEvents() {
         let encoder = JSONEncoder()
         if let encodedData = try? encoder.encode(events) {
-            UserDefaults.standard.set(encodedData, forKey: "EventItems")
+            UserDefaults.standard.set(encodedData, forKey: "Events")
         }
     }
     
-    private func loadItems() {
-        if let savedData = UserDefaults.standard.data(forKey: "EventItems") {
+    private func loadEvents() {
+        if let savedData = UserDefaults.standard.data(forKey: "Events") {
             let decoder = JSONDecoder()
             if let decodedData = try? decoder.decode([Event].self, from: savedData) {
                 events = decodedData
