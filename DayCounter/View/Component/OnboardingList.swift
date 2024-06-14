@@ -15,7 +15,7 @@ struct OnboardingList: View {
     var body: some View {
         HStack(spacing: 15) {
             Image(systemName: icon)
-                .font(.largeTitle)
+                .font(.title)
                 .foregroundColor(.accentColor)
             VStack(alignment: .leading, spacing: 5) {
                 Text(text)

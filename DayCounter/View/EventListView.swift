@@ -59,7 +59,7 @@ struct EventListView: View {
             }
         }
         .sheet(isPresented: $addEventView) {
-            AddEventView(eventModel: eventModel)
+            EventSheetView(eventModel: eventModel)
         }
     }
 }

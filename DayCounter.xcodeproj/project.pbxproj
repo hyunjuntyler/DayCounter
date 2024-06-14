@@ -17,8 +17,7 @@
 		293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B282A9517B200A63324 /* OnboardingView.swift */; };
 		293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2B2A9517E900A63324 /* StartButton.swift */; };
 		293C6B322A951B9600A63324 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B312A951B9600A63324 /* EventListView.swift */; };
-		293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* AddEventView.swift */; };
-		293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B352A951C4B00A63324 /* EditEventView.swift */; };
+		293C6B342A951BEF00A63324 /* EventSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B332A951BEF00A63324 /* EventSheetView.swift */; };
 		293C6B382A951C9800A63324 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B372A951C9800A63324 /* EventCard.swift */; };
 		2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2946849D2B56F458003DDF79 /* Font+Extension.swift */; };
 		294684A02B56F653003DDF79 /* TossFaceFontMac.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2946849F2B56F5A4003DDF79 /* TossFaceFontMac.ttf */; };
@@ -41,8 +40,7 @@
 		293C6B282A9517B200A63324 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		293C6B2B2A9517E900A63324 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		293C6B312A951B9600A63324 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
-		293C6B332A951BEF00A63324 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
-		293C6B352A951C4B00A63324 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		293C6B332A951BEF00A63324 /* EventSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSheetView.swift; sourceTree = "<group>"; };
 		293C6B372A951C9800A63324 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		293C6B3B2A952B7600A63324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2946849D2B56F458003DDF79 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -135,8 +133,7 @@
 				293C6B132A95128500A63324 /* ContentView.swift */,
 				293C6B282A9517B200A63324 /* OnboardingView.swift */,
 				293C6B312A951B9600A63324 /* EventListView.swift */,
-				293C6B332A951BEF00A63324 /* AddEventView.swift */,
-				293C6B352A951C4B00A63324 /* EditEventView.swift */,
+				293C6B332A951BEF00A63324 /* EventSheetView.swift */,
 				293C6B2A2A9517D700A63324 /* Component */,
 			);
 			path = View;
@@ -299,11 +296,10 @@
 				293C6B322A951B9600A63324 /* EventListView.swift in Sources */,
 				295757982BE3353500F48BE5 /* OnboardingList.swift in Sources */,
 				290610232C1C910800A5B701 /* DateExtension.swift in Sources */,
-				293C6B342A951BEF00A63324 /* AddEventView.swift in Sources */,
+				293C6B342A951BEF00A63324 /* EventSheetView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
 				293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */,
 				2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */,
-				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
 				293C6B232A9515DB00A63324 /* HapticManager.swift in Sources */,

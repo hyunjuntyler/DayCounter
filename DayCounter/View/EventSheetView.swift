@@ -7,15 +7,19 @@
 
 import SwiftUI
 
-struct AddEventView: View {
+struct EventSheetView: View {
     @Environment(\.dismiss) private var dismiss
     
     @ObservedObject var eventModel: EventModel
+    
     @State private var date = Date()
     @State private var title = ""
     @State private var note = ""
     
+    @State private var alert = false
     @State private var openDatePicker = false
+    
+    var event: Event?
     
     var body: some View {
         NavigationStack {
@@ -41,6 +45,7 @@ struct AddEventView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing, -5)
                     }
+                    
                     if openDatePicker {
                         DatePicker("", selection: $date, displayedComponents: .date)
                             .labelsHidden()
@@ -48,6 +53,7 @@ struct AddEventView: View {
                             .frame(maxWidth: .infinity)
                     }
                 }
+                
                 Section {
                     HStack {
                         TextField("제목", text: $title)
@@ -61,6 +67,7 @@ struct AddEventView: View {
                                 }
                         }
                     }
+                    
                     HStack(alignment: .top) {
                         TextField("노트", text: $note, axis: .vertical)
                             .font(.tossFaceSmall)
@@ -79,8 +86,29 @@ struct AddEventView: View {
                         openDatePicker = false
                     }
                 }
+                
+                if let event = event {
+                    Section {
+                        Button(role: .destructive) {
+                            alert.toggle()
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Text("삭제")
+                                Spacer()
+                            }
+                        }
+                        .alert("정말 삭제하시겠어요?", isPresented: $alert) {
+                            Button("삭제", role: .destructive) {
+                                eventModel.deleteEvent(event.id)
+                                HapticManager.impact(style: .rigid)
+                                dismiss()
+                            }
+                        }
+                    }
+                }
             }
-            .navigationTitle("디데이 추가")
+            .navigationTitle(event == nil ? "디데이 추가" : "디데이 편집")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -88,10 +116,17 @@ struct AddEventView: View {
                         dismiss()
                     }
                 }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let item = Event(date: date, title: title, note: note)
-                        eventModel.addEvent(item)
+                        if let event = event {
+                            let item = Event(id: event.id, date: date, title: title, note: note)
+                            eventModel.editEvent(item)
+                        } else {
+                            let item = Event(date: date, title: title, note: note)
+                            eventModel.addEvent(item)
+                        }
+                        HapticManager.notification(type: .success)
                         dismiss()
                     } label: {
                         Text("저장")
@@ -99,16 +134,23 @@ struct AddEventView: View {
                     }
                 }
             }
+            .onAppear {
+                if let event = event {
+                    date = event.date
+                    title = event.title
+                    note = event.note
+                }
+            }
         }
     }
 }
 
 #Preview("한국어") {
-    AddEventView(eventModel: EventModel())
+    EventSheetView(eventModel: EventModel())
         .environment(\.locale, .init(identifier: "ko"))
 }
 
 #Preview("영어") {
-    AddEventView(eventModel: EventModel())
+    EventSheetView(eventModel: EventModel())
         .environment(\.locale, .init(identifier: "en"))
 }

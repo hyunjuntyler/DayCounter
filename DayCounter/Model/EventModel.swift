@@ -29,14 +29,13 @@ class EventModel: ObservableObject {
     
     func editEvent(_ event: Event) {
         if let index = events.firstIndex(where: { $0.id == event.id }) {
-            print("Item Index: \(index)")
             events[index] = event
             saveEvents()
         }
     }
     
-    func deleteEvent(_ event: Event) {
-        if let index = events.firstIndex(where: { $0.id == event.id }) {
+    func deleteEvent(_ id: UUID) {
+        if let index = events.firstIndex(where: { $0.id == id }) {
             events.remove(at: index)
             saveEvents()
         }
