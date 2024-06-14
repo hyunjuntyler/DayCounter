@@ -14,7 +14,7 @@ struct EventCard: View {
     
     var body: some View {
         Button {
-            Haptic.impact(style: .soft)
+            HapticManager.impact(style: .soft)
             editEventView = true
         } label: {
             HStack {

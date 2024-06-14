@@ -30,7 +30,7 @@ struct OnboardingView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
             StartButton(label: "시작하기") {
-                Haptic.impact(style: .soft)
+                HapticManager.impact(style: .soft)
                 onboarding = false
             }
             .padding(.bottom, 60)

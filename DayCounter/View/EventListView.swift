@@ -24,7 +24,7 @@ struct EventListView: View {
                 
                 if eventModel.events.isEmpty {
                     Button {
-                        Haptic.impact(style: .soft)
+                        HapticManager.impact(style: .soft)
                         addEventView = true
                     } label: {
                         VStack(spacing: 5) {
@@ -50,7 +50,7 @@ struct EventListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         addEventView = true
-                        Haptic.impact(style: .soft)
+                        HapticManager.impact(style: .soft)
                     } label: {
                         Image(systemName: "plus")
                             .fontWeight(.medium)

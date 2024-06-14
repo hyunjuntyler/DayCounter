@@ -12,7 +12,7 @@
 		293C6B142A95128500A63324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B132A95128500A63324 /* ContentView.swift */; };
 		293C6B162A95128600A63324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B152A95128600A63324 /* Assets.xcassets */; };
 		293C6B202A9512D700A63324 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B1F2A9512D700A63324 /* README.md */; };
-		293C6B232A9515DB00A63324 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* Haptic.swift */; };
+		293C6B232A9515DB00A63324 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B222A9515DB00A63324 /* HapticManager.swift */; };
 		293C6B262A9516D200A63324 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B252A9516D200A63324 /* EventModel.swift */; };
 		293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B282A9517B200A63324 /* OnboardingView.swift */; };
 		293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B2B2A9517E900A63324 /* StartButton.swift */; };
@@ -36,7 +36,7 @@
 		293C6B132A95128500A63324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		293C6B152A95128600A63324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293C6B1F2A9512D700A63324 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		293C6B222A9515DB00A63324 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		293C6B222A9515DB00A63324 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		293C6B252A9516D200A63324 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		293C6B282A9517B200A63324 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		293C6B2B2A9517E900A63324 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
@@ -73,6 +73,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		290610242C1C948100A5B701 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				293C6B222A9515DB00A63324 /* HapticManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		293C6B052A95128500A63324 = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +114,9 @@
 		293C6B212A9514E200A63324 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				290610242C1C948100A5B701 /* Manager */,
 				290610212C1C90F500A5B701 /* Extension */,
 				2957579A2BE3371200F48BE5 /* ButtonStyle */,
-				293C6B222A9515DB00A63324 /* Haptic.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -298,7 +306,7 @@
 				293C6B362A951C4B00A63324 /* EditEventView.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
 				293C6B292A9517B200A63324 /* OnboardingView.swift in Sources */,
-				293C6B232A9515DB00A63324 /* Haptic.swift in Sources */,
+				293C6B232A9515DB00A63324 /* HapticManager.swift in Sources */,
 				293C6B382A951C9800A63324 /* EventCard.swift in Sources */,
 				2957579C2BE3371E00F48BE5 /* ScaleDownButtonStyle.swift in Sources */,
 			);
