@@ -7,9 +7,6 @@
 		<string>TossFaceFontMac.ttf</string>
 	</array>
 	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string>AccentColor</string>
-	</dict>
+	<dict/>
 </dict>
 </plist>
