@@ -13,16 +13,12 @@ struct EventCard: View {
     var event: Event
     
     var body: some View {
-        
-        let dayCount = calculateDays(to: event.date)
-        let dayCountString = formatDayCount(dayCount)
-        
         Button {
             Haptic.impact(style: .soft)
             editEventView = true
         } label: {
             HStack {
-                Text("\(dayCountString)")
+                Text("\(event.date.getDday)")
                     .font(.title2)
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
@@ -52,27 +48,6 @@ struct EventCard: View {
         .buttonStyle(ScaleDownButtonStyle())
         .sheet(isPresented: $editEventView) {
             EditEventView(eventModel: eventModel, date: event.date, title: event.title, note: event.note, id: event.id)
-        }
-    }
-        
-    private func calculateDays(to dateCount: Date) -> Int {
-        let calendar = Calendar.current
-        
-        let start = calendar.startOfDay(for: Date())
-        let end = calendar.startOfDay(for: dateCount)
-        
-        let components = calendar.dateComponents([.day], from: start, to: end)
-        
-        return components.day ?? 0
-    }
-        
-    private func formatDayCount(_ days: Int) -> String {
-        if days == 0 {
-            return "D-Day"
-        } else if days > 0 {
-            return "D-\(days)"
-        } else {
-            return "D+\(-days + 1)"
         }
     }
 }
