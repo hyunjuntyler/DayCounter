@@ -30,7 +30,7 @@ struct EventCard: View {
                     .padding(16)
                     .background(
                         RoundedRectangle(cornerRadius: 8, style: .continuous)
-                            .foregroundColor(Color(.systemGray6))
+                            .foregroundStyle(.thinMaterial)
                     )
                     .padding(.leading, -5)
                 
@@ -39,7 +39,7 @@ struct EventCard: View {
                 VStack(alignment: .trailing, spacing: 8) {
                     Text("\(event.date.formatted(date: .abbreviated, time: .omitted))")
                         .font(.caption)
-                        .foregroundStyle(Color(.systemGray2))
+                        .foregroundStyle(.gray)
                     Text("\(event.title)")
                         .font(.tossFaceMedium)
                         .foregroundColor(.primary)
