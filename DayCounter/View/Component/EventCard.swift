@@ -25,8 +25,8 @@ struct EventCard: View {
                     .foregroundStyle(.mint)
                     .padding(16)
                     .background(
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
-                            .foregroundStyle(.thinMaterial)
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .foregroundStyle(.regularMaterial)
                     )
                     .padding(.leading, -5)
                 

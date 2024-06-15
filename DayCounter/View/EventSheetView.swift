@@ -39,7 +39,7 @@ struct EventSheetView: View {
                                 .padding(.horizontal, 6)
                                 .background(
                                     RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                        .foregroundStyle(.thinMaterial)
+                                        .foregroundStyle(.regularMaterial)
                                 )
                         }
                         .frame(maxWidth: .infinity, alignment: .trailing)
