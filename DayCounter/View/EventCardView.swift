@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EventCard: View {
+struct EventCardView: View {
     @ObservedObject var eventModel: EventModel
     @State private var editEventView = false
     var event: Event
@@ -54,14 +54,14 @@ struct EventCard: View {
 
 #Preview("한국어") {
     List {
-        EventCard(eventModel: EventModel(), event: Event(date: Date(), title: "테스트", note: "테스트"))
+        EventCardView(eventModel: EventModel(), event: Event(date: Date(), title: "테스트", note: "테스트"))
     }
     .environment(\.locale, .init(identifier: "ko"))
 }
 
 #Preview("영어") {
     List {
-        EventCard(eventModel: EventModel(), event: Event(date: Date(), title: "Test", note: "Test"))
+        EventCardView(eventModel: EventModel(), event: Event(date: Date(), title: "Test", note: "Test"))
     }
     .environment(\.locale, .init(identifier: "en"))
 }
