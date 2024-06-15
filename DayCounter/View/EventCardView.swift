@@ -25,7 +25,7 @@ struct EventCardView: View {
                     .foregroundStyle(.mint)
                     .padding(16)
                     .background(
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .foregroundStyle(.regularMaterial)
                     )
                     .padding(.leading, -5)
@@ -44,6 +44,7 @@ struct EventCardView: View {
                 }
                 .padding(.vertical, 5)
             }
+            .contentShape(Rectangle())
         }
         .buttonStyle(ScaleDownButtonStyle())
         .sheet(isPresented: $editEventView) {
