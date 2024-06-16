@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		290610232C1C910800A5B701 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290610222C1C910800A5B701 /* DateExtension.swift */; };
+		2910B4EA2C1ED77200BD0994 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2910B4E92C1ED77200BD0994 /* DateExtension.swift */; };
 		293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B112A95128500A63324 /* DayCounterApp.swift */; };
 		293C6B142A95128500A63324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C6B132A95128500A63324 /* ContentView.swift */; };
 		293C6B162A95128600A63324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293C6B152A95128600A63324 /* Assets.xcassets */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		290610222C1C910800A5B701 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = ../../../../Solver/DateExtension.swift; sourceTree = "<group>"; };
+		2910B4E92C1ED77200BD0994 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		293C6B0E2A95128500A63324 /* DayCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293C6B112A95128500A63324 /* DayCounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCounterApp.swift; sourceTree = "<group>"; };
 		293C6B132A95128500A63324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,20 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		290610212C1C90F500A5B701 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				290610222C1C910800A5B701 /* DateExtension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		290610242C1C948100A5B701 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				293C6B222A9515DB00A63324 /* HapticManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		2910B4E82C1ED76900BD0994 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2910B4E92C1ED77200BD0994 /* DateExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		293C6B052A95128500A63324 = {
@@ -112,8 +112,8 @@
 		293C6B212A9514E200A63324 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2910B4E82C1ED76900BD0994 /* Extension */,
 				290610242C1C948100A5B701 /* Manager */,
-				290610212C1C90F500A5B701 /* Extension */,
 				2957579A2BE3371200F48BE5 /* ButtonStyle */,
 			);
 			path = Utility;
@@ -295,9 +295,9 @@
 				293C6B142A95128500A63324 /* ContentView.swift in Sources */,
 				293C6B322A951B9600A63324 /* EventListView.swift in Sources */,
 				295757982BE3353500F48BE5 /* OnboardingList.swift in Sources */,
-				290610232C1C910800A5B701 /* DateExtension.swift in Sources */,
 				293C6B342A951BEF00A63324 /* EventSheetView.swift in Sources */,
 				293C6B122A95128500A63324 /* DayCounterApp.swift in Sources */,
+				2910B4EA2C1ED77200BD0994 /* DateExtension.swift in Sources */,
 				293C6B2C2A9517E900A63324 /* StartButton.swift in Sources */,
 				2946849E2B56F458003DDF79 /* Font+Extension.swift in Sources */,
 				293C6B262A9516D200A63324 /* EventModel.swift in Sources */,
