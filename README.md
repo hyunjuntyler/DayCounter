@@ -1,46 +1,35 @@
 <div align="center">
-<img width = "100" src="https://github.com/hyunjuntyler/DayCounter/assets/120548537/57078c66-b65c-463f-8fc6-8d6adacee7ff">
+<img width = "100" src="https://github.com/hyunjuntyler/DayCounter/assets/120548537/c66d5583-8b57-44b4-897b-5b57dc3d38eb">
 
 # DayCounter
- 🗓️ 디데이를 계산해주는 앱
+ 🗓️ 디데이 앱
 </div>
 
 <div align="center">
-<img width = "1000" src="https://github.com/hyunjuntyler/readme-templates/assets/120548537/d44d16fc-d8bf-4429-a111-69d2e9b18592">
+ 
+[<img width = "200" src="https://github-production-user-asset-6210df.s3.amazonaws.com/120548537/251533420-0eb9b31b-8203-48b7-8dcd-3725a8c9da49.png">](https://apps.apple.com/kr/app/%EB%8D%B0%EC%9D%B4%EC%B9%B4%EC%9A%B4%ED%84%B0/id6463042095)
 
-<br>
+<img width = "1000" src="https://github.com/hyunjuntyler/DayCounter/assets/120548537/ba927363-fc2e-4bea-9bb0-32b710fc0ca3">
 
-<br>
-
-[<img width = "200" src="https://github-production-user-asset-6210df.s3.amazonaws.com/120548537/251533420-0eb9b31b-8203-48b7-8dcd-3725a8c9da49.png">](https://www.apple.com/kr/store)
-  
 </div>
+
+<br>
 
 <br>
 
 ## 📑 Description
-  
-앱에 대한 설명
-  
-**Feature 1**  
-- feature
+    
+**디데이 확인**  
+- 설정한 날짜까지의 디데이를 확인할 수 있습니다.
+- 간단한 노트와 제목까지 설정할 수 있습니다.
 
-**Feature 2**
-- feature
-
-<br>
-
-<br>
-  
-## 🔍 Preview
-<img width = "1000" src="https://github.com/hyunjuntyler/readme-templates/assets/120548537/764b9b1a-6d17-4b65-afae-0d31a320e4b3">
 <br>
 
 <br>
 
 ## 💻 Development Environment
 
-<img height="20" src="https://img.shields.io/badge/iOS-17.0+-lightgray">  <img height="20" src="https://img.shields.io/badge/Xcode-15.1-skyblue">  <img height="20" src="https://img.shields.io/badge/Swift-5.9.2-orange"> <img height="20" src="https://img.shields.io/badge/Platform-iOS-lightgreen"> 
+<img height="20" src="https://img.shields.io/badge/iOS-17.0+-lightgray">  <img height="20" src="https://img.shields.io/badge/Xcode-15.4-skyblue">  <img height="20" src="https://img.shields.io/badge/Swift-5.10-orange"> <img height="20" src="https://img.shields.io/badge/Platform-iOS-lightgreen"> 
 
 <br>
 
